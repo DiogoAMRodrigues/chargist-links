@@ -18,7 +18,8 @@
   </div>
   <script>
     const url = new URL(window.location.href);
-    const id = url.pathname.split("/").pop();
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
     const deepLink = `chargist://station/${id}`;
     const fallback = "https://play.google.com/store/apps/details?id=com.example.projectcmu7";
 
